@@ -1,4 +1,18 @@
 module.exports = {
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'YzRequiem',
+          name: 'my-electron-app',
+          
+        },
+        prerelease: false,
+        draft: true,
+      },
+    },
+  ],
   packagerConfig: {},
   rebuildConfig: {},
   makers: [
