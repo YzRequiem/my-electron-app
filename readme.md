@@ -23,6 +23,9 @@ npm run package
 
 npm run publish
 
+--SET TOKEN--
+https://github.com/electron/forge/issues/2820
+
 ## Connect to the server building
 
 --TUTORIAL-- 
