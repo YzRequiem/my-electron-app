@@ -19,7 +19,7 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       
       config: {
-        loadingGif: 'giphy.gif',
+        loadingGif: 'giphyy.gif',
         authors: 'Alice and Bob',
         description: 'An example Electron app'
       },
