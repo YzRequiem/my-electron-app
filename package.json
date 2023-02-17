@@ -1,6 +1,6 @@
 {
   "name": "my-electron-app",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "description random",
   "main": "main.js",
   "scripts": {
@@ -25,7 +25,8 @@
     "@electron-forge/maker-wix": "^6.0.5",
     "@electron-forge/maker-zip": "^6.0.5",
     "@electron-forge/publisher-github": "^6.0.5",
-    "electron": "^23.0.0"
+    "electron": "^23.0.0",
+    "electron-wix-msi": "^5.0.0"
   },
   "dependencies": {
     "@electron-forge/maker-dmg": "^6.0.5",
