@@ -17,8 +17,10 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      platforms: ['win32'],
-      config: {},
+      
+      config: {
+        loadingGif: '/giphy.gif',
+      },
     },
     {
       name: '@electron-forge/maker-zip',
