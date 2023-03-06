@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain, autoUpdater, dialog  } = require('electron');
 require('update-electron-app')();
-
+if (require('electron-squirrel-startup')) app.quit();
 // include the Node.js 'path' module at the top of your file
 
 const path = require('path')
@@ -18,24 +18,6 @@ setInterval(() => {
   console.log("Checking for updates");
   autoUpdater.checkForUpdates()
 }, 60000)
-
-// dialog box to notify the user that an update is available
-autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
-  const dialogOpts = {
-    type: 'info',
-    buttons: ['Restart', 'Later'],
-    title: 'Application Updateuh',
-    releaseName: 'leohello',
-    message: process.platform === 'win32' ? releaseName : nomrelease,
-    
-    détail:
-      'bla bla bla Une nouvelle version a été téléchargée. Restart the application to apply the updates.',
-  }
-
-  dialog.showMessageBox(dialogOpts).then((returnValue) => {
-    if (returnValue.response === 0) autoUpdater.quitAndInstall()
-  })
-})
 
 
 

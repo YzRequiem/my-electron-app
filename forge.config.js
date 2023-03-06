@@ -22,7 +22,7 @@ module.exports = {
         loadingGif: 'giphyy.gif',
         authors: 'Alice and Bob',
         description: 'An example Electron app',
-        noMsi: true,
+        noMsi: false,
       },
     },
     {
