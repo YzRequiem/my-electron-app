@@ -12,6 +12,8 @@ const url = `${server}/update/${process.platform}/${app.getVersion()}`
 
 autoUpdater.setFeedURL({ url })
 
+// SetInterval to check for updates every 60 seconds
+
 setInterval(() => {
   console.log("Checking for updates");
   autoUpdater.checkForUpdates()
