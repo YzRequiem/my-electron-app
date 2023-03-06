@@ -19,6 +19,29 @@ setInterval(() => {
   autoUpdater.checkForUpdates()
 }, 60000)
 
+// dialog box to notify the user that an update is available
+autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+  const dialogOpts = {
+    type: 'info',
+    buttons: ['Restart', 'Later'],
+    title: 'Application Update',
+    message: process.platform === 'win32' ? releaseNotes : nomrelease,
+    détail:
+      'Une nouvelle version a été téléchargée. Restart the application to apply the updates.',
+  }
+
+  dialog.showMessageBox(dialogOpts).then((returnValue) => {
+    if (returnValue.response === 0) autoUpdater.quitAndInstall()
+  })
+})
+
+autoUpdater.on('error', (message) => {
+  console.error('There was a problem updating the application')
+  console.error(message)
+})
+
+
+
 // modify your existing createWindow() function
 
 const createWindow = () => {
