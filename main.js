@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain, autoUpdater, dialog  } = require('electron');
-
+require('update-electron-app')();
 
 // include the Node.js 'path' module at the top of your file
 
