@@ -21,7 +21,8 @@ module.exports = {
       config: {
         loadingGif: 'giphyy.gif',
         authors: 'Alice and Bob',
-        description: 'An example Electron app'
+        description: 'An example Electron app',
+        noMsi: true,
       },
     },
     {
