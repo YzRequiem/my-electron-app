@@ -24,10 +24,10 @@ autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
   const dialogOpts = {
     type: 'info',
     buttons: ['Restart', 'Later'],
-    title: 'Application Update',
+    title: 'Application Updateuh',
     message: process.platform === 'win32' ? releaseNotes : nomrelease,
     détail:
-      'Une nouvelle version a été téléchargée. Restart the application to apply the updates.',
+      'bla bla bla Une nouvelle version a été téléchargée. Restart the application to apply the updates.',
   }
 
   dialog.showMessageBox(dialogOpts).then((returnValue) => {
@@ -35,10 +35,6 @@ autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
   })
 })
 
-autoUpdater.on('error', (message) => {
-  console.error('There was a problem updating the application')
-  console.error(message)
-})
 
 
 
