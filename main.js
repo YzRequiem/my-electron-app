@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain, autoUpdater, dialog  } = require('electron');
-require('update-electron-app')();
+
 
 // include the Node.js 'path' module at the top of your file
 
@@ -25,7 +25,9 @@ autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
     type: 'info',
     buttons: ['Restart', 'Later'],
     title: 'Application Updateuh',
-    message: process.platform === 'win32' ? releaseNotes : nomrelease,
+    releaseName: 'leohello',
+    message: process.platform === 'win32' ? releaseName : nomrelease,
+    
     détail:
       'bla bla bla Une nouvelle version a été téléchargée. Restart the application to apply the updates.',
   }
