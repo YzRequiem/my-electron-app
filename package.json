@@ -1,6 +1,6 @@
 {
   "name": "my-electron-app",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "description random",
   "main": "main.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "author": "leo sallier",
   "license": "ISC",
-  "homepage": "https://app.silver-smok.com",
+  "homepage": "https://sveltekit-auth-lucia-test-one.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/YzRequiem/my-electron-app"
