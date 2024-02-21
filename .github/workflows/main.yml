@@ -4,7 +4,7 @@ on:
     tags:
       - "v*"
   workflow_dispatch:
-  
+
 permissions: write-all
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # for projects that use labels and PRs,
       # try https://github.com/mikepenz/release-changelog-builder-action instead
@@ -33,7 +33,7 @@ jobs:
         run: echo "changelog=- ADD CHANGELOG" >> $GITHUB_OUTPUT
 
       - name: Node.js setup
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         # NOTE: enterprise developers may hard code a version
         with:
           node-version: latest
@@ -41,11 +41,10 @@ jobs:
 
       - name: Install app dependencies from lockfile and build web
         # NOTE: comment out && yarn build if frontend does not have build script
-        run: npm install 
+        run: npm install
 
       - name: Build the app
-        run: npm run publish 
+        run: npm run publish
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
