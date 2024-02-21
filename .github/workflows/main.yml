@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v3
         # NOTE: enterprise developers may hard code a version
         with:
-          node-version: 20
+          node-version: latest
           # node-version-file: '.nvmrc'
 
       - name: Install app dependencies from lockfile and build web
