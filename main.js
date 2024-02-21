@@ -38,7 +38,7 @@ const createWindow = () => {
 
   ipcMain.handle("ping", () => "pong"); // Ajouté pour la fonction ping dans renderer.js
 
-  win.loadFile("index.html");
+  win.loadURL("https://sveltekit-auth-lucia-test-one.vercel.app/");
 };
 
 app.whenReady().then(() => {
