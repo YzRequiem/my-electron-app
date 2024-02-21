@@ -25,6 +25,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
       # for projects that use labels and PRs,
       # try https://github.com/mikepenz/release-changelog-builder-action instead
       # TODO: use API to collect commit messages
